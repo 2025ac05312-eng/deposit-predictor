@@ -1,0 +1,17 @@
+# Raw dataset — reproducible via model/train_models.py, not committed
+data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+train_log.txt
