@@ -1,0 +1,74 @@
+{
+  "Logistic Regression": {
+    "best_params": {
+      "clf__C": 0.1
+    },
+    "metrics": {
+      "Accuracy": 0.8934,
+      "AUC": 0.7589,
+      "Precision": 0.6767,
+      "Recall": 0.1701,
+      "F1": 0.2719,
+      "MCC": 0.3031
+    }
+  },
+  "Decision Tree": {
+    "best_params": {
+      "clf__max_depth": 15,
+      "clf__min_samples_leaf": 5
+    },
+    "metrics": {
+      "Accuracy": 0.8885,
+      "AUC": 0.7193,
+      "Precision": 0.5541,
+      "Recall": 0.242,
+      "F1": 0.3368,
+      "MCC": 0.3156
+    }
+  },
+  "K-Nearest Neighbors": {
+    "best_params": {
+      "clf__n_neighbors": 25,
+      "clf__weights": "distance"
+    },
+    "metrics": {
+      "Accuracy": 0.8924,
+      "AUC": 0.7543,
+      "Precision": 0.6793,
+      "Recall": 0.1522,
+      "F1": 0.2486,
+      "MCC": 0.287
+    }
+  },
+  "Naive Bayes": {
+    "best_params": {
+      "clf__var_smoothing": 1e-07
+    },
+    "metrics": {
+      "Accuracy": 0.8358,
+      "AUC": 0.7288,
+      "Precision": 0.3427,
+      "Recall": 0.4395,
+      "F1": 0.3851,
+      "MCC": 0.295
+    }
+  },
+  "Random Forest": {
+    "best_params": {
+      "clf__max_depth": 15,
+      "clf__n_estimators": 400
+    },
+    "metrics": {
+      "Accuracy": 0.8958,
+      "AUC": 0.7948,
+      "Precision": 0.6921,
+      "Recall": 0.1975,
+      "F1": 0.3074,
+      "MCC": 0.3326
+    }
+  },
+  "_baseline_majority_class_accuracy": 0.883,
+  "_seed": 5312,
+  "_test_size": 9043,
+  "_train_size": 36168
+}
