@@ -1,4 +1,4 @@
-# DepositIQ — Term Deposit Subscription Predictor
+# DepositIQ - Term Deposit Subscription Predictor
 
 BITS Pilani WILP · M.Tech (AIML/DSE) · Machine Learning Assignment 2
 **Prarthana Naik · 2025AC05312**
@@ -124,19 +124,3 @@ cd deposit-predictor
 pip install -r requirements.txt          # add --user on the BITS lab if needed
 python3 -m streamlit run app.py
 ```
-
-## Environment note (Python/scikit-learn version pinning)
-
-The BITS Virtual Lab runs Python 3.9 (newest installable scikit-learn there
-is 1.6.1) while Streamlit Community Cloud defaults to a much newer Python.
-scikit-learn pickles are **not** portable across the 1.6 → 1.7 boundary. To
-keep both environments identical, `requirements.txt` pins
-**`scikit-learn==1.6.1`**, and on Streamlit Cloud the app's **Advanced
-settings → Python version is set to 3.12**. `app.py` also has a fallback: if
-a saved `.joblib` ever fails to unpickle, it automatically refits that one
-model from its saved best hyperparameters on the same seed/split, so the
-reported metrics stay identical either way.
-
-## BITS Virtual Lab execution screenshot
-
-*(added after running the app on the BITS Virtual Lab — see submission PDF)*
