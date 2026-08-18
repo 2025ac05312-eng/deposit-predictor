@@ -80,4 +80,4 @@ scoring on ROC-AUC, and evaluated on a held-out, stratified 20% test split
 
 ## Streamlit app link
 
-https://deposit-predictor-gsajwyig9qrykwbezc2u4c.streamlit.app/
+https://deposit-predictor-gwdgqpyuyep5ia7phtmafc.streamlit.app/
