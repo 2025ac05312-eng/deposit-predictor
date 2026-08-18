@@ -45,10 +45,7 @@ observations below.
 
 ## c. GitHub repository link
 
-https://github.com/2025ac05312-eng/deposit-predictor
-
-*(Live Streamlit app: **PASTE THE LIVE URL HERE AFTER DEPLOYING**, then
-commit this file again — see the deployment steps below.)*
+https://deposit-predictor-gsajwyig9qrykwbezc2u4c.streamlit.app/
 
 ## d. Models used
 
