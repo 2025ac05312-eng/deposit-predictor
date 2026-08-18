@@ -48,7 +48,22 @@ st.markdown(
     .stApp {{ background-color: {CREAM}; color: #1A1A1A; }}
     h1, h2, h3 {{ color: {TEAL}; }}
     section[data-testid="stSidebar"] {{ background-color: {TEAL}; }}
-    section[data-testid="stSidebar"] * {{ color: {CREAM} !important; }}
+    /* Only recolor sidebar labels/headings/captions — NOT the inner text of
+       input widgets (selectbox, file uploader, checkbox), which sit on their
+       own white backgrounds and need dark text to stay readable. */
+    section[data-testid="stSidebar"] h1,
+    section[data-testid="stSidebar"] h2,
+    section[data-testid="stSidebar"] h3,
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] .stCaption,
+    section[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {{
+        color: {CREAM} !important;
+    }}
+    section[data-testid="stSidebar"] [data-baseweb="select"] * {{ color: #1A1A1A !important; }}
+    section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] {{ color: #1A1A1A !important; }}
+    section[data-testid="stSidebar"] [data-testid="stFileUploaderDropzone"] * {{ color: #1A1A1A !important; }}
+    section[data-testid="stSidebar"] button {{ color: #1A1A1A !important; }}
     div.stButton > button, .stDownloadButton > button {{
         background-color: {GOLD}; color: {TEAL}; border: none; font-weight: 600;
     }}
