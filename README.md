@@ -45,7 +45,7 @@ observations below.
 
 ## c. GitHub repository link
 
-https://deposit-predictor-gsajwyig9qrykwbezc2u4c.streamlit.app/
+https://github.com/2025ac05312-eng/deposit-predictor
 
 ## d. Models used
 
@@ -78,46 +78,6 @@ scoring on ROC-AUC, and evaluated on a held-out, stratified 20% test split
 | Decision Tree | A single tree lands second-best on MCC (0.3156) and has noticeably better Recall (0.242) than Logistic Regression or KNN, but its AUC is the lowest of the five — a single tree's greedy, axis-aligned splits rank continuous probabilities worse than an ensemble or a linear model, even when its hard-label metrics look competitive. |
 | **Overall Winner for your dataset?** | **Random Forest** — highest AUC and MCC, the two metrics that matter most for an imbalanced binary target, plus the best raw accuracy. *(Caveat: if the bank's priority is maximising recall — i.e., minimising missed subscribers — over precision, Naive Bayes is the stronger practical choice despite its lower accuracy.)* |
 
-## Streamlit app features
+## Streamlit app link
 
-- **CSV upload** — upload any CSV with the 15 feature columns (optionally
-  with a true `y` column) in the sidebar, or use the bundled `test_data.csv`
-  sample with one click.
-- **Model selection dropdown** — switch between all 5 tuned models.
-- **Metrics display** — Accuracy, AUC, Precision, Recall, F1, MCC computed
-  live on the uploaded/bundled file (when true labels are present), plus a
-  full leaderboard tab.
-- **Confusion matrix & classification report** — rendered per prediction run.
-
-## Repository structure
-
-```
-deposit-predictor/
-├── app.py                  # Streamlit app
-├── requirements.txt        # pinned at repo root
-├── README.md
-├── test_data.csv           # held-out stratified test split (20%)
-└── model/
-    ├── train_models.py     # data loading, pipelines, tuning, evaluation
-    ├── metrics.json         # real metrics + best hyperparameters per model
-    ├── logistic_regression.joblib
-    ├── decision_tree.joblib
-    ├── k_nearest_neighbors.joblib
-    ├── naive_bayes.joblib
-    └── random_forest.joblib
-```
-
-The raw dataset itself is **not** committed (see `.gitignore`) — it is
-cached locally by `train_models.py` on first run, downloaded from a stable
-public mirror of the UCI Bank Marketing dataset. Re-running
-`python3 model/train_models.py` reproduces every number in this README from
-scratch (same seed, same split).
-
-## Reproducing / running locally
-
-```bash
-git clone https://github.com/2025ac05312-eng/deposit-predictor.git
-cd deposit-predictor
-pip install -r requirements.txt          # add --user on the BITS lab if needed
-python3 -m streamlit run app.py
-```
+https://deposit-predictor-gsajwyig9qrykwbezc2u4c.streamlit.app/
